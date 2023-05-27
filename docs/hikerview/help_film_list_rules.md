@@ -23,7 +23,7 @@
 ### 点击位置：
 即二级列表的规则需要根据不同点击位置，来使用不同的规则，用fyIndex占位符，实际解析的时候会自动将fyIndex替换为点击的位置
 
-```text
+```txt
 body&&.stui-pannel__head&&li;a&&Text;*;*;*==>body&&.stui-content__playlist,fyIndex&&li;a&&Text;*;*;a&&href;text_3
 ```
 
@@ -37,12 +37,12 @@ body&&.stui-pannel__head&&li;a&&Text;*;*;*==>body&&.stui-content__playlist,fyInd
 
 即点击二级列表或者首页列表结果时，根据规则再次解析链接，获取真正要用网页访问的链接
 
-```text
+```txt
 body&&.stui-content__playlist,fyIndex&&li;a&&Text;*;*;a&&href.js:input+'@lazyRule=body＆＆＆＆a＆＆＆＆href'
 ```
 
 纯JS示例
-```text
+```txt
 body&&.stui-content__playlist,fyIndex&&li;a&&Text;*;*;a&&href.js:input+'@lazyRule=.js:input'
 ```
 
@@ -117,7 +117,7 @@ $("https://m.baidu.com").x5Rule(() => {
 子页面标识形如index.html，那么如果一个按钮点击后要跳转此页面，就可以把此按钮链接url的值设置为``hiker://page/index.html``
 
 参数传递：一种是通过url链接里面携带参数，示例
-```text
+```txt
 hiker://page/index.html?type=mp4&source=http://www.baidu.com
 那么在index.html里面可以通过getParam方法来获取里面的type和source参数的值，具体可以搜索getParam查看其使用方法
 ```

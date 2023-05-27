@@ -35,7 +35,7 @@
 格式：列表;标题;图片;描述;链接
 
 示例
-```text
+```txt
 body&&#post-list&&li;a&&title;img&&src;.index-intro&&Text;a&&href
 ```
 
@@ -50,7 +50,7 @@ body&&#post-list&&li;a&&title;img&&src;.index-intro&&Text;a&&href
 除此之外，还可以用jsoup原生的选择器语法，如body img[src$=.png]&&src表示获取body下src属性以.png结尾的img标签的src属性
 
 增强：文本支持多个选择器结果拼接，示例
-```text
+```txt
 body&&li;a,0&&title+'--'+a,1&&title;img&&src;.c&&Text;a&&href，即多个选择器用+分隔，如果末尾要用.js:处理，那么用中文＋，中间要拼接字符串则将字符串用'包裹
 ```
 
@@ -63,7 +63,7 @@ body&&li;a,0&&title+'--'+a,1&&title;img&&src;.c&&Text;a&&href，即多个选择�
 格式：列表;标题;链接;描述;详情;图片
 
 示例
-```text
+```txt
 .list-content&&.u-movie;h2&&Text;a&&href;.pingfen&&Text;.meta&&Text;img&&data-original
 ```
 
@@ -80,7 +80,7 @@ POST传参和get一样，真正请求时会自动转到body里面，如果链接
 :::
 
 示例
-```text
+```txt
 http://www.google.com？？action=search?q=1&s=**;POST;gbk;{User-Agent@Windows&&Cookie@id}
 ```
 
@@ -91,7 +91,7 @@ POST请求用一个参数``JsonBody``，代表json参数，注意引号的使用
 :::
 
 示例
-```text
+```txt
 http://www.google.com?q=1&JsonBody={"key1":"**","key2":233};POST;gbk;{User-Agent@Windows&&Cookie@id}
 ```
 
@@ -102,12 +102,12 @@ http://www.google.com?q=1&JsonBody={"key1":"**","key2":233};POST;gbk;{User-Agent
 :::
 
 示例
-```text
+```txt
 http://www.google.com?q=**.js:decodeStr(input,'GBK');POST;gbk;{User-Agent@Windows&&Timestamp@.js:new Date().getTime()}
 ```
 
 示例说明
-```text
+```txt
 网页内容会被GBK编码显示，但是url使用utf-8编码（默认会同样被GBK编码，``.js:decodeStr(input,'GBK')``会再把关键词解码，然后真正请求时会默认使用UTF-8编码）
 ```
 
@@ -142,7 +142,7 @@ http://www.google.com?q=**.js:decodeStr(input,'GBK');POST;gbk;{User-Agent@Window
 即点击二级列表或者首页列表结果时，根据规则再次解析链接，获取真正要用网页访问的链接
 
 示例
-```text
+```txt
 body&&.stui-content__playlist,fyIndex&&li;a&&Text;*;*;a&&href.js:input+'@lazyRule=body＆＆＆＆a＆＆＆＆href'
 ```
 

@@ -2,7 +2,7 @@
 
 不显示``loading``弹窗，请求时会自动删除该标识，仅做标识用
 
-```text
+```txt
 a&&href.js:input+'#noLoading#@lazyRule=.js:input'
 ```
 

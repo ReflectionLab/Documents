@@ -315,7 +315,7 @@ setHomeResult(d);
 :::
 
 示例
-```text
+```txt
 http://www.google.com?q=**.js:decodeStr(input,'GBK');POST;gbk;{User-Agent@Windows&&Timestamp@.js:new Date().getTime()}
 ```
 
@@ -740,7 +740,7 @@ const a = fixM3u8('http://yy/xx.m3u8', '#EXT-X-KEY:xxx.key\nxxx.ts')
 ```
 
 返回：修正后的文件内容，如
-```text
+```txt
 #EXT-X-KEY:http://yy/xxx.key\nhttp://yy/xxx.ts
 ```
 
@@ -786,7 +786,7 @@ downloadFile('http://xxx.jar', 'hiker://files/cache/xxx.jar', {'User-Agent': 'xx
 ```
 
 ### 仅下载一次：
-```text
+```txt
 requireDownload('http://xxx.jar', 'hiker://files/cache/xxx.jar')
 ```
 

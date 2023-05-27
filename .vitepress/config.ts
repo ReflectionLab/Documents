@@ -51,6 +51,9 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ReflectionLab/Documents' }
-    ]
+    ],
+    search: {
+      provider: 'local',
+    }
   }
 })
