@@ -25,3 +25,8 @@ TODOs.md
 .vitepress/dist/
 .vitepress/cache/
 .idea/
+
+# lockfile
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
